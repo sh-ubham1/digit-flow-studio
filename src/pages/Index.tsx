@@ -1,12 +1,30 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { DashboardStats } from "@/components/DashboardStats"
+import { RecentProjects } from "@/components/RecentProjects"
+import { ActivityFeed } from "@/components/ActivityFeed"
+import { ClientList } from "@/components/ClientList"
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <div className="space-y-6">
+      <div>
+        <h1 className="text-3xl font-bold tracking-tight">Dashboard</h1>
+        <p className="text-muted-foreground">
+          Welcome back! Here's what's happening with your agency today.
+        </p>
       </div>
+      
+      <DashboardStats />
+      
+      <div className="grid gap-6 lg:grid-cols-3">
+        <div className="lg:col-span-2">
+          <RecentProjects />
+        </div>
+        <div>
+          <ActivityFeed />
+        </div>
+      </div>
+      
+      <ClientList />
     </div>
   );
 };
