@@ -6,6 +6,7 @@ import {
   BarChart3, 
   DollarSign, 
   Calendar,
+  MessageSquare,
   Settings,
   Building2
 } from "lucide-react"
@@ -26,6 +27,7 @@ import {
 
 const items = [
   { title: "Dashboard", url: "/", icon: LayoutDashboard },
+  { title: "Messages", url: "/messages", icon: MessageSquare },
   { title: "Clients", url: "/clients", icon: Users },
   { title: "Projects", url: "/projects", icon: FolderOpen },
   { title: "Analytics", url: "/analytics", icon: BarChart3 },

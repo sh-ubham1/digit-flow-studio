@@ -6,6 +6,7 @@ import { AppSidebar } from "@/components/AppSidebar";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
+import Messages from "./pages/Messages";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,9 +27,10 @@ const App = () => (
                   <h2 className="text-lg font-semibold">Digital Marketing CRM</h2>
                 </div>
               </header>
-              <div className="p-6">
+              <div className="p-0 md:p-6">
                 <Routes>
                   <Route path="/" element={<Index />} />
+                  <Route path="/messages" element={<Messages />} />
                   {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                   <Route path="*" element={<NotFound />} />
                 </Routes>
